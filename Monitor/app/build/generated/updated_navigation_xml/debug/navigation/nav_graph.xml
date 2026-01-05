@@ -1,0 +1,42 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/nav_graph"
+app:startDestination="@id/expensesFragment" >
+<fragment
+    android:id="@+id/expensesFragment"
+    android:name="com.example.monitor.ui.expenses.ExpensesFragment"
+    android:label="Wydatki" >
+
+    <action
+        android:id="@+id/action_expensesFragment_to_addExpenseFragment"
+        app:destination="@id/addExpenseFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/addExpenseFragment"
+    android:name="com.example.monitor.ui.expenses.AddExpenseFragment"
+    android:label="Dodaj wydatek" />
+<fragment
+    android:id="@+id/statisticsFragment"
+    android:name="com.example.monitor.ui.statistics.StatisticsFragment"
+    android:label="Statystyki" />
+<fragment
+    android:id="@+id/remindersFragment"
+    android:name="com.example.monitor.ui.reminders.RemindersFragment"
+    android:label="Przypomnienia" >
+
+    <action
+        android:id="@+id/action_remindersFragment_to_addReminderFragment"
+        app:destination="@id/addReminderFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/addReminderFragment"
+    android:name="com.example.monitor.ui.reminders.AddReminderFragment"
+    android:label="Dodaj przypomnienie" />
+<fragment
+    android:id="@+id/reportsFragment"
+    android:name="com.example.monitor.ui.reports.ReportsFragment"
+    android:label="Raporty" />
+</navigation>
